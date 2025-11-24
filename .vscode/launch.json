@@ -7,10 +7,8 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "c:\\Users\\mcdon\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.10\\out\\startpage\\index.html", // Provide your project's url to finish configuring
-            "presentation": {
-                "hidden": true
-            }
+            "url": "http://localhost:8080", // Update this URL to match your project
+            "webRoot": "${workspaceFolder}"
         },
         {
             "type": "pwa-msedge",
@@ -20,19 +18,15 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "c:\\Users\\mcdon\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.10\\out\\startpage\\index.html", // Provide your project's url to finish configuring
-            "presentation": {
-                "hidden": true
-            }
+            "url": "http://localhost:8080", // Update this URL to match your project
+            "webRoot": "${workspaceFolder}"
         },
         {
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "c:\\Users\\mcdon\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.10\\out\\startpage\\index.html", // Provide your project's url to finish configuring
-            "presentation": {
-                "hidden": true
-            }
+            "url": "http://localhost:8080", // Update this URL to match your project
+            "webRoot": "${workspaceFolder}"
         }
     ],
     "compounds": [
