@@ -13,17 +13,29 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Cancel in-progress runs when a new run is triggered for the same branch/PR
+# This prevents wasting CI resources on outdated commits
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    # Set a timeout to prevent jobs from running indefinitely
+    timeout-minutes: 10
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Using fetch-depth: 1 for faster checkout (shallow clone)
+      # Note: Use fetch-depth: 0 if you need full git history (e.g., for changelogs or version calculations)
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
