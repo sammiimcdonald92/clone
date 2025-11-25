@@ -1,4 +1,10 @@
 {
+  "recommendations": [
+    "ms-vsliveshare.vsliveshare",
+    "ms-vsliveshare.vsliveshare-pack"
+  ]
+}
+{
     "recommendations": [
         "ms-dotnettools.vscode-dotnet-runtime",
         "ms-azuretools.vscode-azureappservice",
