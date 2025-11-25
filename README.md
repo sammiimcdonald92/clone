@@ -7,7 +7,7 @@ This document identifies potential inefficiencies and suggests improvements for 
 
 ### GitHub Actions Workflow Improvements
 
-The CI workflow (`.github/workflows/blank.yml`) can be optimized with the following improvements:
+The CI workflow can be optimized with the following improvements:
 
 1. **Concurrency Control**: Cancel redundant workflow runs when new commits are pushed to avoid wasting CI resources.
 

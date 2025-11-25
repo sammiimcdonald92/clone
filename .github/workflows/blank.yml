@@ -31,7 +31,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # Using fetch-depth: 1 for faster checkout when full history isn't needed
+      # Using fetch-depth: 1 for faster checkout (shallow clone)
+      # Note: Use fetch-depth: 0 if you need full git history (e.g., for changelogs or version calculations)
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
