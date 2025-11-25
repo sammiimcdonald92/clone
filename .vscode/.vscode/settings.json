@@ -1,0 +1,9 @@
+{
+    "windowsaistudio.enableRemoteFine-tuningAndInference": true,
+    "windowsaistudio.externalOpenAIProviders": [
+    
+    ],
+    "appService.zipIgnorePattern": "",
+    "containerApps.deploymentConfigurations": [],
+    "mongo.shell.path": ""
+}
